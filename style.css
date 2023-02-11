@@ -1,0 +1,108 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    gap: 50px;
+    background-color: rgb(233, 233, 233);
+}
+#icon{
+    color:white;
+    font-size:25px; 
+    display: none;
+}
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar ul li a{
+    display: block;
+    color: black;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    margin: 0 5px;
+}
+.nav-bar a:hover{
+    transition: 0.5s;
+    letter-spacing: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.514);
+}
+.profile{
+    background: rgba(0, 0, 0, 0.644); 
+    padding: 15px;
+}
+.profile:hover{
+    transition: 0.5s;
+    cursor: pointer;
+    color: black;
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.555);
+}
+#links{
+    padding: 10px;
+    color: rgb(206, 87, 8);
+    background-color: rgba(255, 255, 255, 0.822);
+    border-radius: 50px;
+}
+#links:hover{
+    transition: 0.5s;
+    font-size: 30px;
+}
+.footer-item{
+    text-transform: uppercase; 
+    font-size: 20px; 
+    margin-bottom: 20px;
+}
+.contact{
+    margin-bottom: 15px;
+}
+.bot-nav a, .like a{
+    color: black;
+}
+.bot-nav a:hover, .like a:hover{
+   cursor: pointer;
+   transition: 0.5s;
+   color: white;
+}
+.bot-nav ul li{
+    margin-bottom: 10px;
+}
+@media(max-width: 768px) {
+    #icon{
+        display: block;
+    }
+    .nav-bar.active{
+        height: 500px;
+        z-index: 1;
+    }
+    .nav-bar{
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: rgba(255, 255, 255, 0.767);
+        overflow: hidden;
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        opacity: 0;
+    }
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 25px;
+        letter-spacing: 3px;
+    }
+}
